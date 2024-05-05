@@ -41,3 +41,4 @@ console.table([u, v, s]);
 // console.log(bankBalance);
 // console.log(answer);
 // console.table([x, y, z]);
+//ECMAScript (/ˈɛkməskrɪpt/; ES) is a standard for scripting languages, including JavaScript, JScript, and ActionScript. It is best known as a JavaScript standard intended to ensure the interoperability of web pages across different web browsers.
