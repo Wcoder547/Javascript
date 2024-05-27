@@ -38,3 +38,11 @@ const mycar = {
 console.log(mycar.make); // "Honda"
 myFunc(mycar);
 console.log(mycar.make); // "Toyota"
+
+function mufunc(thearray){
+    thearray[0]=30;
+  }
+  const arr=[45];
+  console.log(arr[0]); // 45 
+  mufunc(arr);
+  console.log(arr[0]);  //30
