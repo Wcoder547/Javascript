@@ -48,3 +48,4 @@ console.log(a1); //wasim
   let a4 = "ali";
 }
 //console.log(a4); // a4 is not defined
+console.log("The end ");
