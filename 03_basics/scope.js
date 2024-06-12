@@ -49,3 +49,7 @@ console.log(a1); //wasim
 }
 //console.log(a4); // a4 is not defined
 console.log("The end ");
+
+//---------------important-----------------------------
+//there will be different scope when we run js on node js and when we render it on client side just like in browser
+//console.
