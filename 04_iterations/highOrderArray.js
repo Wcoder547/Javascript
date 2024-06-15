@@ -88,7 +88,7 @@ const webSeries = ["hostel_days", "jee krda ", "imMature", "Kota-Factory"];
 const favSeries = webSeries.forEach((item, index, arr) =>
   console.log(item, index, arr)
 );
-console.log(favSeries);
+// console.log(favSeries);
 
 // const favSeries = webSeries.forEach((item) => console.log(item));
 
@@ -101,3 +101,28 @@ console.log(favSeries);
 //   console.log(item);
 // }
 // console.log(favSeries);
+
+const codingCourse2 = [
+  {
+    language: "js",
+    price: 2999,
+  },
+  {
+    language: "python",
+    price: 4999,
+  },
+
+  {
+    language: "java",
+    price: 6999,
+  },
+
+  {
+    language: "swift",
+    price: 12999,
+  },
+];
+
+codingCourse2.forEach((item) => {
+  console.log(item.language);
+});
