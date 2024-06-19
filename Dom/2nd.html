@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a new elemenet</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div class="parent">
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+
+    <script>
+      // console.log("is js working");
+      const parent = document.querySelector(".parent");
+      //   console.log(parent);
+      //   console.log(parent.children);
+      //   console.log(parent.children[0]);
+
+      for (let i = 0; i < parent.children.length; i++) {
+        // console.log(parent.children[i]);
+      }
+      //   console.log(parent.children[0].innerHTML);
+
+      //   console.log(parent.firstElementChild);
+      //   console.log(parent.lastElementChild);
+
+      const firstElem = document.querySelector(".day");
+      //console.log(firstElem);
+      //   console.log(firstElem.children); //length is 0
+
+      //console.log(firstElem.parentElement);
+      //console.log(firstElem.nextElementSibling.nextElementSibling); //wednesday
+      //console.log(firstElem.lastElementChild); //null
+      //   console.log(`Nodes  ${parent.childNodes}`);
+      console.log("Nodes", parent.childNodes);
+    </script>
+  </body>
+</html>

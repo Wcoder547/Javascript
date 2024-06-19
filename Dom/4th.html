@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit | Remove Element</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li class="js">Javascript</li>
+    </ul>
+
+    <script>
+      console.log("hello world");
+
+      function addLI(langname) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langname}`;
+        document.querySelector(".language").appendChild(li);
+      }
+      addLI("python");
+      addLI("Rust");
+
+      function addTwoLi(langname) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langname));
+        document.querySelector(".language").appendChild(li);
+      }
+      addTwoLi("Ruby");
+      addTwoLi("dynamic Li");
+
+      //Edit
+      const secondLanguage = document.querySelector("li:nth-child(2)");
+      //   console.log(secondLanguage);
+      const newLi = document.createElement("li");
+      newLi.textContent = "PHP";
+      // console.log(newLi);
+      secondLanguage.replaceWith(newLi);
+      //   console.log(secondLanguage);
+
+      //Edit
+      const firstLang = document.querySelector("li:first-child");
+      firstLang.outerHTML = "<li>first language</li>";
+
+      //Remove..
+
+      const lastLang = document.querySelector("li:last-child");
+      lastLang.remove();
+    </script>
+  </body>
+</html>
