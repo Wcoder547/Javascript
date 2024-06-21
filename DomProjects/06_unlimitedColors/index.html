@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlimited colors Project | By Malik waseem</title>
+  </head>
+  <body>
+    <h1>Start should change the background Color</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    const randomCOlor = function () {
+      const hex = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += hex[Math.floor(Math.random() * 16)];
+      }
+      //console.log(color);
+      return color;
+    };
+    let intervalID;
+    const startChangingColor = () => {
+      //console.log(intervalID); //undefined
+      if (!intervalID) {
+        intervalID = setInterval(changebgColor, 1000);
+      }
+      function changebgColor() {
+        document.body.style.backgroundColor = `${randomCOlor()}`;
+      }
+    };
+
+    const stopChangingColor = function () {
+      clearInterval(intervalID);
+      //console.log(intervalID); //undefined ..if we again press stop then intervalID will be undefiend| Null
+
+      intervalID = null; //after it wil be null
+    };
+    document
+      .querySelector("#start")
+      .addEventListener("click", startChangingColor);
+    document
+      .querySelector("#stop")
+      .addEventListener("click", stopChangingColor);
+  </script>
+</html>
