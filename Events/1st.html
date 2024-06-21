@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events in Javascript | By Malik waseem</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <h2>Amazing Images</h2>
+    <ul id="Images">
+      <li><img src="./11.png" alt="cisco" width="200px" id="cisco" /></li>
+      <li>
+        <img src="./12.png" alt="cmnd" width="200px" id="cmnd" />
+      </li>
+      <li><img src="./13.png" alt="vlan" width="200px" id="vlan" /></li>
+      <li><img src="./14.png" alt="dynamic" width="200px" id="dynamic" /></li>
+      <li><img src="./15.png" alt="lock" width="200px" id="lock" /></li>
+      <li>
+        <a
+          href="https://google.com"
+          style="color: aqua"
+          target="_blank"
+          id="google"
+          >google</a
+        >
+      </li>
+    </ul>
+  </body>
+  <script>
+    console.log("js is working");
+    // document.getElementById("cmnd").onclick = function () {
+    //   alert(" command image is clicked");
+    // // };
+
+    // document.getElementById("cmnd").addEventListener(
+    //   "click",
+    //   function () {
+    //     alert("command images is clicked"); //best way to write .
+    //   },
+    //   false
+    // );
+
+    //attachEvent.. Early time when internet explore pe run krna hota tha ...
+    //onEventListener .... Early in Jquery
+
+    //type,timeStamp, preventDefault..
+    //target ,toElement ,sourceElement ..currentTarget
+    //clientX ,clientY,screenX ,screenY ,tiltX ,tiltY
+    //altKey,cntrlKey,shiftKey ,keycode
+
+    // document.getElementById("cmnd").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     console.log(e);
+    //     // console.log(e.timeStamp);
+    //     //console.log(e.altKey); //false
+    //     // console.log(e.clientX, e.clientY); //141 259
+    //   },
+    //   false
+    // );
+
+    // document.getElementById("Images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("clicked inside the ul"); //2nd call
+    //   },
+    //   false
+    // );
+    // document.querySelector("#cmnd").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("command images is clicked"); //1st call
+    //     //e.stopPropagation //in this sense bubbling up will not happen!!
+    //   },
+    //   false
+    // ); //bubbling up which means inside to outside ..or otherway to
+    //promote from downgrade to upgreade.
+
+    // document.getElementById("Images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("clicked inside the ul"); //1st call
+    //   },
+    //   true
+    // );
+    // document.querySelector("#cmnd").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("command images is clicked"); //2nd call
+    //   },
+    //   true
+    // ); // capturing ...which means that top to bottom ...
+
+    // document.getElementById("google").addEventListener("click", function (e) {
+    //   console.log("google is clicked "); //it is using bubbling up
+    //   e.preventDefault();
+    //   e.stopPropagation(); //now capturing.
+    // });
+
+    //Removing any Li....
+
+    document.querySelector("#Images").addEventListener("click", function (e) {
+      //console.log(e.target); //return us img tag
+      //console.log(e.target.parentNode); //give us parent which is li.
+
+      if (e.target.tagName == "IMG") {
+        const removeNode = e.target.parentNode;
+        removeNode.remove(); //removed..
+      }
+
+      //removeNode.parentNode.removeChild(removeNode);
+    });
+  </script>
+</html>
