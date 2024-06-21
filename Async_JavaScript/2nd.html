@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Javascript with Two Projects</title>
+  </head>
+  <body>
+    <h1 id="name">M Talha Makhdoom</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // console.log("is js working");
+    // setInterval(() => {
+    //   console.log("waseem akram", Date.now());
+    // }, 1000);
+
+    const sayDate = function (str) {
+      console.log(str, Date.now()); //you can use default value also just like i passed it as parameter str whcih value is hi
+    };
+    const stopInterval = setInterval(sayDate, 1000, "hi");
+
+    document.getElementById("stop").addEventListener("click", () => {
+      clearInterval(stopInterval);
+    });
+  </script>
+</html>
