@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <button>button clicked</button>
+  </body>
+  <script>
+    console.log("dr mashoor gulati is speaking");
+    class React {
+      constructor() {
+        this.library = "React";
+        this.server = "https://localhost:3000";
+        document
+          .querySelector("button")
+          .addEventListener("click", this.hadnleclick.bind(this));
+      }
+
+      hadnleclick() {
+        console.log("this button is clicked");
+        console.log(this); //before bind this present the context in which this calling wich means that button it return a button ..
+        //but after giving bind(this) this context change and it give us complete class ...
+      }
+    }
+
+    const app = new React();
+  </script>
+</html>
