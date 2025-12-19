@@ -1,40 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Keyboard Check Project</title>
-  </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      background-color: #212121;
-      color: #fff;
-    }
-    #insert {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .color {
-      border: 2px solid yellow;
-    }
-  </style>
-  <body>
-    <div id="project">
-      <div id="insert">
-        <div id="key">press any key and watch magic</div>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keyboard Check Project</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #212121;
+    color: #fff;
+  }
+
+  #insert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .color {
+    border: 2px solid yellow;
+  }
+</style>
+
+<body>
+  <div id="project">
+    <div id="insert">
+      <div id="key">press any key and watch magic</div>
     </div>
-  </body>
-  <script>
-    const insert = document.getElementById("insert");
-    window.addEventListener("keydown", function (e) {
-      insert.innerHTML = `
+  </div>
+</body>
+<script>
+  const insert = document.getElementById("insert");
+  window.addEventListener("keydown", function (e) {
+    insert.innerHTML = `
       <div class='color'>
         <table>
       <tr>
@@ -50,6 +55,7 @@
     </table> 
         </div>
         `;
-    });
-  </script>
+  });
+</script>
+
 </html>

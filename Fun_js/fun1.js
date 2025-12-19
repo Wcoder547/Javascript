@@ -17,4 +17,4 @@ const arr1 = [
 console.log(arr1);
 console.log(typeof arr1); //it's object..
 const c = arr1[1];
-console.log(c);
+console.log(c); //{ name: 'waseem akram', class: 'bsit' } , it's object..
