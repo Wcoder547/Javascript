@@ -13,9 +13,27 @@ The JavaScript Engine dynamically allocates memory to the heap. Initially, the h
 // in stack it will pass by value it copy the value but in heep it is pass by refrence...and it give to refrence  of that object..array& functions
 //datatypes are based on memory allocation
 
-
-
 // JavaScript is a dynamically typed language. This means that you don't need to specify the data type of a variable when you declare it
+
+console.log(process.memoryUsage()); // { rss: 22394816, heapTotal: 6635520, heapUsed: 3670520, external: 8272 }
+// Primitive datatypes -> stored in stack memory
+// Reference/Non primitive datatypes -> stored in heap memory
+
+function logMemoryUsage(label = "Memory Usage") {
+  const memory = process.memoryUsage();
+
+  const toMB = (bytes) => (bytes / 1024 / 1024).toFixed(2);
+
+  console.log(`\n ${label}`);
+  console.log(`RSS:          ${toMB(memory.rss)} MB`);
+  console.log(`Heap Total:   ${toMB(memory.heapTotal)} MB`);
+  console.log(`Heap Used:    ${toMB(memory.heapUsed)} MB`);
+  console.log(`External:     ${toMB(memory.external)} MB`);
+  console.log(`ArrayBuffers: ${toMB(memory.arrayBuffers)} MB\n`);
+}
+
+logMemoryUsage("App Start");
+
 let myName = "waseem akram";
 let secondName = myName;
 
@@ -24,7 +42,7 @@ let secondName = myName;
 
 secondName = "malik waseem";
 //console.log(myName); // waseem akram
-//console.log(secondName); // malik waseem 
+//console.log(secondName); // malik waseem
 // Primitive datatypes->  call by value (string,number,boolean,null,undefined,BigInt,symbol) ->Stack memory -> copy the values.
 
 let userOne = {
@@ -43,3 +61,7 @@ console.log(userOne.course); //Bscs
 // Reference/Non primitive data types -> call by reference ( array,object, function) -> heap memory -> gives the orignal position of ..
 
 //Picture link : https://excalidraw.com/#json=M9abj9wYfxMqsjT01_dkO,lfVvB6GMUDcf3hTAskp3VA
+
+//premitive datatypes-> string,number,boolean,null,undefined,BigInt,symbol
+//non premitive datatypes-> array,object,function
+logMemoryUsage("App End");

@@ -26,7 +26,12 @@ const notANum = Number.NaN;
 
 const min = 10;
 const max = 20;
-console.log(Math.floor(Math.random() * (max - min) + 1 + min));
+console.log(Math.random()); //0 to 1
+console.log(Math.floor(Math.random() * (max - min))); //0 to 10
+console.log(Math.floor(Math.random() * (max - min) + 1)); //1 to 10
+console.log(Math.floor(Math.random() * (max - min) + 1 + min)); //10 to 20
+
+
 // Math.ceil
 // Math.round
 // Math.max

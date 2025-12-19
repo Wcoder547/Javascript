@@ -22,4 +22,5 @@ console.log(gameName.slice(-3, 4)); //end wale 3 dega like in pubg it will give 
 console.log(gameName.substring(-2, 4)); //it ignore negative values..it start from 0
 // console.log(2 + "2");
 let sum = "2" + 2;
+console.log(sum);
 console.log(typeof sum);
