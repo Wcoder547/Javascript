@@ -1,5 +1,3 @@
-// console.log("hello world");
-
 const user = {
   name: "waseem akram",
   rollno: 21,
@@ -12,7 +10,6 @@ const user = {
 };
 
 //user.welcomemsg();
-//
 //console.log(this); // {} in node this give us empty curly braces .
 // in browser console this present the [object Window].
 // user.welcomemsg();
@@ -51,11 +48,13 @@ const user = {
 const obj1 = () => ({
   name: "waseem akram",
 });
-// console.log(obj1()); // now it will return the object ...
+// console.log(obj1()); // now it will return the object ..
 
+// const insta_name = "waseem_malik547";
+// console.log(this.insta_name); //undefined
 // const chai = () => {
 //   let instaName = "waseem_malik547";
-//   console.log(this.instaName);
+//   console.log(this.instaName); //undefined
 //   // console.log(this); //{empty object}
 // };
 // chai();
@@ -78,13 +77,12 @@ const obj1 = () => ({
 // obj.regularFunction();
 
 const outerFunction = {
-    outerContext: function() {
-        console.log(this); // outerFunction object
-        const innerArrowFunction = () => {
-            console.log(this); // outerFunction object (lexically inherited)
-        };
-        innerArrowFunction();
-    }
+  outerContext: function () {
+    console.log(this); // outerFunction object
+    const innerArrowFunction = () => {
+      console.log(this); // outerFunction object (lexically inherited)
+    };
+    innerArrowFunction();
+  },
 };
 outerFunction.outerContext();
-

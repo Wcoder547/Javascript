@@ -1,5 +1,3 @@
-// console.log("hello world");
-
 function one() {
   const username = "Waseem akram";
   function two() {
@@ -34,7 +32,4 @@ console.log(addtwo(7)); //throw an error bacause it stores in a variable ..
 const addtwo = function (value) {
   return value + 2;
 };
-//javascript make a tree in which a variables and function are hold .... 
-
-
-
+//javascript make a tree in which a variables and function are hold ....

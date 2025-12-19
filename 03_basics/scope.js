@@ -1,4 +1,3 @@
-// console.log("hello world");
 let a = 10;
 const b = 20;
 var c = 30;
@@ -14,16 +13,15 @@ if (true) {
 let x = "hello this is me .hacker";
 const func1 = function () {
   let x = "hello this is x";
-
   console.log(x);
 };
-//func1();
-//console.log(x);
+//func1(); // hello this is x
+//console.log(x); //hello this is me .hacker
 const func2 = function () {
   const y = "hello this is y";
   console.log(y);
 };
-//func2();
+//func2(); // hello this is y
 //console.log(y);// y is not defined ...
 var z = "hello this is wwwz";
 const func3 = function () {
@@ -31,13 +29,13 @@ const func3 = function () {
   console.log(z);
 };
 
-//func3();
-//console.log(z);
+//func3(); // hello this is z
+//console.log(z); // hello this is wwwz
 
 {
   var a1 = "wasim";
 }
-console.log(a1); //wasim
+console.log(a1); //wasim (var has global scope)
 
 {
   const a2 = "qasim";
@@ -52,4 +50,7 @@ console.log("The end ");
 
 //---------------important-----------------------------
 //there will be different scope when we run js on node js and when we render it on client side just like in browser
-//console.
+//this in node.js
+console.log(this); // {}
+//this in browser
+//console.log(this); // Window {window: Window, self: Window, document: document, name: '', location: Location, …}

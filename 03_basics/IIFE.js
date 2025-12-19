@@ -2,16 +2,15 @@
 
 // ()()
 (function chai() {
-    //named IIFE
+  //named IIFE
   let name = "waseem akram ";
   console.log(name);
 })();
 
-((best) => {
+((social_media_app) => {
   console.log("hello everyone");
-  console.log(`${best}, this is my favourite social media `);
+  console.log(`${social_media_app}, this is my favourite social media `);
 })("instagram");
-
 
 //-------------Important----------
 // used for avoding the global variable pollutioning ....

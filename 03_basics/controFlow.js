@@ -108,11 +108,11 @@ const arr = [];
 
 //Nulish coalescing operator  (??) : null,undefined
 let val1;
-// val1 = null ?? 5;
-// val1 = undefined ?? 5;
+// val1 = null ?? 5; //5
+// val1 = undefined ?? 5; //5
 // val1 = null ?? undefined; //undefined ..
-val1 = null ?? 10 ?? 20;
-//console.log(val1);
+val1 = null ?? 10 ?? 20; //10
+// console.log(val1);
 
 //Terniary Operator..
 
