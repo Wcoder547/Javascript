@@ -2,7 +2,7 @@
 
 class user {
   constructor(username, password) {
-    this.username = username;git
+    this.username = username;
     this.password = password;
   }
   get password() {
