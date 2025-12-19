@@ -1,5 +1,3 @@
-//console.log("hello world");
-
 const userName = function () {
   console.log("hello waseem_akram");
 };

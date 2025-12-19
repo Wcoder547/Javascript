@@ -1,4 +1,3 @@
-//console.log("hello world");
 const mysym = Symbol("key1"); //Capital S.
 const mysym2 = Symbol("key2"); //Capital S.
 const army = {
@@ -26,11 +25,11 @@ const army = {
 
 // you can use object.freeze() for freez so that they cannot be used by anyone ...
 
-army.greeting=function(){
+army.greeting = function () {
   console.log("hello sir");
-}
-army.greetingtwo=function(){
+};
+army.greetingtwo = function () {
   console.log(`hello sir ${this.cheif}`);
-}
-console.log(army.greeting())//hello sir undefined..
-console.log(army.greetingtwo()); //hello sir hafiz syed asim munir .. undefined..
+};
+console.log(army.greeting()); //hello sir (undefined)..
+console.log(army.greetingtwo()); //hello sir hafiz syed asim munir .. (undefined)..
