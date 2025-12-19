@@ -1,6 +1,7 @@
-// console.log("is js working");
-
 // fetch("https://something.com").then().catch().finally(); //Basic syntax
+// what is promise ..
+// it is used to handle async operation in js ..
+// it is a object that  represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
 // const promiseOne = new Promise(function (resolve, reject) {
 //   //Do an async task
